@@ -79,7 +79,7 @@ In summary, the signal decoupling modules (+SD) consistently improve the perform
 ## Examples
 
 
-|   |0 DT|41 DT|62 DT|80 DT|
+|   |80 DT|41 DT|62 DT|0 DT|
 |:---:|:---:|:---:|:---:|:---:|
 | mic | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_mic.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_mic.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_mic.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_mic.png) | 
 | near | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_near.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_near.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_near.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_near.png) | 
