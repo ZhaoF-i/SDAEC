@@ -39,11 +39,10 @@ where $S[t, f]$, $D[t, f]$ and $X^\prime_{nl}[t, f]$ represent the near-end sign
 ## Methodology
 ### Overview
 
-<div align="center">
-<img src="https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/overview.png" alt="overview" width="500" height="200" >
-<span style="display:inline-block; width:40px;"></span>
-<img src="https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/SDM.png" alt="signal decoupling module" width="400" height="300" >
-</div>
+| ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/overview.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/SDM.png) |
+|:---:|:---:|
+
+
 
   As shown above on the left, the proposed approach comprises two main components: a signal decoupling module and an AEC module. First, the far-end speech signal and the microphone signal are fed into the signal decoupling module to estimate an energy scaling factor. This energy scaling factor is multiplied with the far-end speech signal to obtain a modified input. Concurrently, the microphone signal is also provided as input to the AEC module, along with the modified far-end input. The AEC module then predicts the near-end speech signal by suppressing the echo components.
 
@@ -80,6 +79,8 @@ In summary, the signal decoupling modules (+SD) consistently improve the perform
 ## Examples
 
 ​<audio id="audio" controls="" preload="none">
-      <source id="mp3" src="音频地址">
+      <source id="mp3" src="https://github.com/ZhaoF-i/SDAEC/blob/main/wav samples/80DT_est.wav">
 </audio>
+
+[![音频播放器](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://github.com/ZhaoF-i/SDAEC/edit/main/wav samples/80DT_est.wav)
 
