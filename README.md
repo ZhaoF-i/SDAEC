@@ -78,9 +78,15 @@ In summary, the signal decoupling modules (+SD) consistently improve the perform
 
 ## Examples
 
-​<audio id="audio" controls="" preload="none">
-      <source id="mp3" src="https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_est.wav">
-</audio>
 
-[![音频播放器](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://github.com/ZhaoF-i/SDAEC/edit/main/wav_samples/80DT_mic.wav)
+|   |0 DT|41 DT|62 DT|80 DT|
+|:---:|:---:|:---:|:---:|:---:|
+| mic | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_mic.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_mic.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_mic.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_mic.png) | 
+| near | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_near.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_near.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_near.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_near.png) | 
+| far | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_far.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_far.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_far.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_far.png) | 
+| far*alpha | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_farAlpha.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_farAlpha.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_farAlpha.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_farAlpha.png) | 
+| ICCRN | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_ICCRN_est.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_ICCRN_est.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_ICCRN_est.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_ICCRN_est.png) | 
+| ICCRN+SD | ![Image 1](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_ICCRN+SD_est.png) | ![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/41DT_ICCRN+SD_est.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/62DT_ICCRN+SD_est.png) |![Image 2](https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/0DT_ICCRN+SD_est.png) | 
+
+
 
