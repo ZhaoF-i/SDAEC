@@ -57,7 +57,7 @@ The proposed signal decoupling method is employed in conjunction with the follow
  * **ICRN*** : This model employs in-place convolution and channel-wise temporal modeling to preserve the near-end signal information. The asterisk $*$ indicates that the multi-task learning strategy employed in ICRN has been removed from this model.
  * **CRN*** : This model employs convolutional recurrent networks (CRN) and long short-term memory (LSTM) networks to separate the near-end speech from the microphone signal. The asterisk $*$ denotes that a convolution kernel of size (1, 3) is employed in this model.
 
-## Results and examples
+## Result  
 
 |              |          |           |          |           |           |          |           |          |           |           |          |           |          |           |           |
 | :----------: | :------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :------: | :-------: | :-------: |
@@ -73,5 +73,13 @@ The proposed signal decoupling method is employed in conjunction with the follow
 |  **CRN+SD**  | **1.81** |   2.92    |   4.4    | **8.32**  | **33.48** | **2.56** | **5.21**  |   4.4    | **8.32**  | **23.54** | **3.17** | **5.98**  |   4.4    | **8.32**  | **13.56** |
 
 
+The effectiveness of the proposed signal decoupling approach is evaluated on three AEC models. As illustrated in the above table, experiments are conducted under signal-to-echo ratios (SERs) of -10, 0, and 10 dB, encompassing simulation scenarios of double-talk, near-end single-talk, and far-end single-talk conditions. 
 
+In summary, the signal decoupling modules (+SD) consistently improve the performance of the AEC models in terms of PESQ (speech quality), SDR (signal-to-distortion ratio), and ERLE (echo suppression) metrics, especially in double-talk and near-end single talk scenarios. The improvements are more pronounced for the ICCRN and CRN models compared to the ICRN model.
+
+## Examples
+
+​<audio id="audio" controls="" preload="none">
+      <source id="mp3" src="音频地址">
+</audio>
 
