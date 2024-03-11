@@ -187,7 +187,7 @@ class TestDataset(Dataset):
         else:
             near_wav = np.pad(near_wav, (self.speech_wav_len - len(near_wav), 0), mode='constant', constant_values=0)
 
-        Ser = self.ser[idx % len(self.ser)]
+        Ser = 10  # -10, 0, and 10  
         alpha = self.mix2signal(near_wav, echo_wav, Ser)
         echo_wav = alpha * echo_wav
 
