@@ -63,7 +63,7 @@ The proposed signal decoupling method is employed in conjunction with the follow
 |     SER      |   -10    |           |          |           |           |    0     |           |          |           |           |    10    |           |          |           |           |
 |    Scenes    |    DT    |           |  ST NE   |           |   ST FE   |    DT    |           |  ST NE   |           |   ST FE   |    DT    |           |  ST NE   |           |   ST FE   |
 | Model/Metric |   PESQ   |    SDR    |   PESQ   |    SDR    |   ERLE    |   PESQ   |    SDR    |   PESQ   |    SDR    |   ERLE    |   PESQ   |    SDR    |   PESQ   |    SDR    |   ERLE    |
-|     mix      |   1.57   |    -10    |   4.5    |  203.79   |    --     |   2.02   |     0     |   4.5    |  203.79   |    --     |   2.62   |    10     |   4.5    |  203.79   |    --     |
+|     mix      |   1.57   |    -10    |   4.5    | $+\infty$ |    --     |   2.02   |     0     |   4.5    | $+\infty$ |    --     |   2.62   |    10     |   4.5    | $+\infty$ |    --     |
 |    ICCRN     |   2.3    |   9.57    | **4.5**  |   20.94   |   42.63   |   2.98   |   14.63   | **4.5**  |   20.94   |   43.08   |   3.51   |   18.25   | **4.5**  |   20.94   |   41.32   |
 | **ICCRN+SD** | **2.36** | **10.18** | **4.5**  | **24.25** | **44.16** | **3.05** | **15.57** | **4.5**  | **24.25** | **43.57** | **3.55** | **19.94** | **4.5**  | **24.25** | **41.97** |
 |     ICRN     |   2.03   |   0.07    |   3.39   |   0.08    | **63.12** |   2.62   |   0.08    |   3.39   |   0.08    | **52.95** |   3.02   |   0.08    |   3.39   |   0.08    | **42.83** |
@@ -79,8 +79,8 @@ In summary, the signal decoupling modules (+SD) consistently improve the perform
 ## Examples
 
 ​<audio id="audio" controls="" preload="none">
-      <source id="mp3" src="https://github.com/ZhaoF-i/SDAEC/blob/main/wav samples/80DT_est.wav">
+      <source id="mp3" src="https://github.com/ZhaoF-i/SDAEC/blob/main/wav_samples/80DT_est.wav">
 </audio>
 
-[![音频播放器](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://github.com/ZhaoF-i/SDAEC/edit/main/wav samples/80DT_est.wav)
+[![音频播放器](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://github.com/ZhaoF-i/SDAEC/edit/main/wav_samples/80DT_mic.wav)
 
