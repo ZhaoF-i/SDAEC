@@ -40,6 +40,13 @@ where $S[t, f]$, $D[t, f]$ and $X^\prime_{nl}[t, f]$ represent the near-end sign
 ### Overview
 
 <div align="center">
-<img src="https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/overview.png" alt="alpha" width="600" height="300" >
-<img src="https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/SDM.png" alt="alpha" width="500" height="300" >
+<img src="https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/overview.png" alt="overview" width="500" height="200" >
+<span style="display:inline-block; width:40px;"></span>
+<img src="https://github.com/ZhaoF-i/SDAEC/blob/main/pictures/SDM.png" alt="signal decoupling module" width="400" height="300" >
 </div>
+
+  As shown above on the left, the proposed approach comprises two main components: a signal decoupling module and an AEC module. First, the far-end speech signal and the microphone signal are fed into the signal decoupling module to estimate an energy scaling factor. This energy scaling factor is multiplied with the far-end speech signal to obtain a modified input. Concurrently, the microphone signal is also provided as input to the AEC module, along with the modified far-end input. The AEC module then predicts the near-end speech signal by suppressing the echo components.
+
+### Signal decoupling module
+  The implementation details of the signal decoupling module are shown in the picture on the right above. We apply a time-unfolding operation to the input far-end signal X and microphone signal D in the time-frequency domain. This operation incorporates information from the preceding (n-1) frames across the time dimension, enabling a more accurate prediction of the energy scaling factor. Subsequently, we apply the absolute value operation and the square operation separately to the time-unfolded signals, obtaining their respective energy information. These two signals are then stacked together, and an addition operation is performed along the frequency dimension to concentrate the energy in the time dimension. The concentrated energy representation is passed through two linear layers, which map the information from n frames to a single frame and analyze the energy scaling factors from the two signals. Another absolute value operation is then applied to the output, ensuring that the resulting signal remains non-negative, thereby computing the final energy scaling factor $alpha$. Ultimately, $X$ is multiplied by $alpha$ to obtain the modified signal $X^\prime$.
+
