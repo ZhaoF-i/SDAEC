@@ -50,3 +50,28 @@ where $S[t, f]$, $D[t, f]$ and $X^\prime_{nl}[t, f]$ represent the near-end sign
 ### Signal decoupling module
   The implementation details of the signal decoupling module are shown in the picture on the right above. We apply a time-unfolding operation to the input far-end signal X and microphone signal D in the time-frequency domain. This operation incorporates information from the preceding (n-1) frames across the time dimension, enabling a more accurate prediction of the energy scaling factor. Subsequently, we apply the absolute value operation and the square operation separately to the time-unfolded signals, obtaining their respective energy information. These two signals are then stacked together, and an addition operation is performed along the frequency dimension to concentrate the energy in the time dimension. The concentrated energy representation is passed through two linear layers, which map the information from n frames to a single frame and analyze the energy scaling factors from the two signals. Another absolute value operation is then applied to the output, ensuring that the resulting signal remains non-negative, thereby computing the final energy scaling factor $alpha$. Ultimately, $X$ is multiplied by $alpha$ to obtain the modified signal $X^\prime$.
 
+### AEC module
+The proposed signal decoupling method is employed in conjunction with the following AEC models:
+
+ * **ICCRN** : A neural network for monaural speech enhancement operating on the time-frequency cepstral domain. It is implemented by incorporating a cepstral frequency block into an in-place convolutional recurrent network. We change the input format of ICCRN to match the AEC task.
+ * **ICRN*** : This model employs in-place convolution and channel-wise temporal modeling to preserve the near-end signal information. The asterisk $*$ indicates that the multi-task learning strategy employed in ICRN has been removed from this model.
+ * **CRN*** : This model employs convolutional recurrent networks (CRN) and long short-term memory (LSTM) networks to separate the near-end speech from the microphone signal. The asterisk $*$ denotes that a convolution kernel of size (1, 3) is employed in this model.
+
+## Results and examples
+
+|              |          |           |          |           |           |          |           |          |           |           |          |           |          |           |           |
+| :----------: | :------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :------: | :-------: | :-------: | :------: | :-------: | :------: | :-------: | :-------: |
+|     SER      |   -10    |           |          |           |           |    0     |           |          |           |           |    10    |           |          |           |           |
+|    Scenes    |    DT    |           |  ST NE   |           |   ST FE   |    DT    |           |  ST NE   |           |   ST FE   |    DT    |           |  ST NE   |           |   ST FE   |
+| Model/Metric |   PESQ   |    SDR    |   PESQ   |    SDR    |   ERLE    |   PESQ   |    SDR    |   PESQ   |    SDR    |   ERLE    |   PESQ   |    SDR    |   PESQ   |    SDR    |   ERLE    |
+|     mix      |   1.57   |    -10    |   4.5    |  203.79   |    --     |   2.02   |     0     |   4.5    |  203.79   |    --     |   2.62   |    10     |   4.5    |  203.79   |    --     |
+|    ICCRN     |   2.3    |   9.57    | **4.5**  |   20.94   |   42.63   |   2.98   |   14.63   | **4.5**  |   20.94   |   43.08   |   3.51   |   18.25   | **4.5**  |   20.94   |   41.32   |
+| **ICCRN+SD** | **2.36** | **10.18** | **4.5**  | **24.25** | **44.16** | **3.05** | **15.57** | **4.5**  | **24.25** | **43.57** | **3.55** | **19.94** | **4.5**  | **24.25** | **41.97** |
+|     ICRN     |   2.03   |   0.07    |   3.39   |   0.08    | **63.12** |   2.62   |   0.08    |   3.39   |   0.08    | **52.95** |   3.02   |   0.08    |   3.39   |   0.08    | **42.83** |
+| **ICRN+SD**  | **2.17** | **0.14**  | **3.88** | **0.17**  |   60.37   | **2.81** | **0.17**  | **3.88** | **0.17**  |   50.36   | **3.27** | **0.18**  | **3.88** | **0.17**  |   40.33   |
+|     CRN      |   1.79   | **3.06**  | **4.42** |   5.62    |   30.47   |   2.51   |   4.42    | **4.42** |   5.62    |   20.45   |   3.13   |   4.47    | **4.42** |   5.62    |   10.46   |
+|  **CRN+SD**  | **1.81** |   2.92    |   4.4    | **8.32**  | **33.48** | **2.56** | **5.21**  |   4.4    | **8.32**  | **23.54** | **3.17** | **5.98**  |   4.4    | **8.32**  | **13.56** |
+
+
+
+
