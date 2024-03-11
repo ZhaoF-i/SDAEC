@@ -5,7 +5,8 @@ This GitHub account was created to comply with INTERSPEECH's double-blind regula
 
 ## Introduction
 
-The diagram of the ideal single-channel AEC system is illustrated in ![LAEC](pictures/LAEC_2.png). The microphone signal $d(n)$ is a mixture of echo signal $y(n)$ and near-end signal $s(n)$.
+The diagram of the ideal single-channel AEC system is illustrated in <img src="pictures/LAEC_2.png" alt="LAEC" width="300" height="200">
+. The microphone signal $d(n)$ is a mixture of echo signal $y(n)$ and near-end signal $s(n)$.
 If the environmental noise is not considered, the microphone signal in the time domain can be formulated as follows:
 \begin{equation}
     d(n) = y(n) + s(n)
