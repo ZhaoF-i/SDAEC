@@ -14,17 +14,12 @@ def stft(x):
 
 
 network = NET()
-origin_name = '/ddnstor/imu_fanhaipeng/result/AEC-challenge-2024/ICCRN_E2E_splitAlphaPredictor10_batch8_OneOptimizer/checkpoints/net-best.ckpt'
-network.load_state_dict(torch.load(origin_name).state_dict)
-save_name = '/ddnstor/imu_fanhaipeng/result/AEC-challenge-2024/ICCRN_E2E_splitAlphaPredictor10_batch8_OneOptimizer/checkpoints/ICCRN.ckpt'
-torch.save(network.state_dict(), save_name)
+save_name = ''
 network.load_state_dict(torch.load(save_name))
 
 
 alpha_predictor = AlphaPredictor(10)
-origin_name = '/ddnstor/imu_fanhaipeng/result/AEC-challenge-2024/ICCRN_E2E_splitAlphaPredictor10_batch8_OneOptimizer/checkpoints/net-best.ckpt'
-alpha_predictor.load_state_dict(torch.load(origin_name.replace('net-best', 'alpha-best')).state_dict)
-save_name = '/ddnstor/imu_fanhaipeng/result/AEC-challenge-2024/ICCRN_E2E_splitAlphaPredictor10_batch8_OneOptimizer/checkpoints/alpha.ckpt'
+save_name = ''
 torch.save(alpha_predictor.state_dict(), save_name)
 alpha_predictor.load_state_dict(torch.load(save_name))
 
