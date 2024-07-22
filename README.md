@@ -1,4 +1,4 @@
-# SDAEC: Signal Decoupling for Advancing Acoustic Echo Cancellation(Interspeech2024论文)
+# SDAEC: Signal Decoupling for Advancing Acoustic Echo Cancellation(Interspeech2024)
 <!--
 ## Announcement
 
